@@ -1,10 +1,4 @@
 //
-//  AppDelegate.swift
-//  overgg-swiftui
-//
-//  Created by Jarek Samic on 9/29/19.
-//  Copyright © 2019 Jarek Samic. All rights reserved.
-//
 
 import UIKit
 

@@ -13,6 +13,11 @@
 		4E5006632340EA9800AC36DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5006622340EA9800AC36DC /* Assets.xcassets */; };
 		4E5006662340EA9800AC36DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5006652340EA9800AC36DC /* Preview Assets.xcassets */; };
 		4E5006692340EA9800AC36DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E5006672340EA9800AC36DC /* LaunchScreen.storyboard */; };
+		4E5006712340ECFE00AC36DC /* rust in Resources */ = {isa = PBXBuildFile; fileRef = 4E5006702340ECFE00AC36DC /* rust */; };
+		4E5006752340F01900AC36DC /* librust.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5006742340F01900AC36DC /* librust.a */; };
+		4EAD69D92340FB49003EA06A /* DataStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD69D62340FB48003EA06A /* DataStructs.swift */; };
+		4EAD69DA2340FB49003EA06A /* Scrapers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD69D72340FB49003EA06A /* Scrapers.swift */; };
+		4EAD69DB2340FB49003EA06A /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD69D82340FB49003EA06A /* Downloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,12 @@
 		4E5006652340EA9800AC36DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E5006682340EA9800AC36DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E50066A2340EA9800AC36DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E5006702340ECFE00AC36DC /* rust */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rust; sourceTree = "<group>"; };
+		4E5006742340F01900AC36DC /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librust.a; path = rust/target/universal/debug/librust.a; sourceTree = "<group>"; };
+		4EAD69D62340FB48003EA06A /* DataStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructs.swift; sourceTree = "<group>"; };
+		4EAD69D72340FB49003EA06A /* Scrapers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrapers.swift; sourceTree = "<group>"; };
+		4EAD69D82340FB49003EA06A /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		4EAD69DC2340FBC3003EA06A /* overgg-swiftui-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "overgg-swiftui-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E5006752340F01900AC36DC /* librust.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +54,8 @@
 			children = (
 				4E50065B2340EA9600AC36DC /* overgg-swiftui */,
 				4E50065A2340EA9600AC36DC /* Products */,
+				4E5006702340ECFE00AC36DC /* rust */,
+				4E5006732340F01900AC36DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +70,9 @@
 		4E50065B2340EA9600AC36DC /* overgg-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				4EAD69D62340FB48003EA06A /* DataStructs.swift */,
+				4EAD69D82340FB49003EA06A /* Downloader.swift */,
+				4EAD69D72340FB49003EA06A /* Scrapers.swift */,
 				4E50065C2340EA9600AC36DC /* AppDelegate.swift */,
 				4E50065E2340EA9600AC36DC /* SceneDelegate.swift */,
 				4E5006602340EA9600AC36DC /* ContentView.swift */,
@@ -63,6 +80,7 @@
 				4E5006672340EA9800AC36DC /* LaunchScreen.storyboard */,
 				4E50066A2340EA9800AC36DC /* Info.plist */,
 				4E5006642340EA9800AC36DC /* Preview Content */,
+				4EAD69DC2340FBC3003EA06A /* overgg-swiftui-Bridging-Header.h */,
 			);
 			path = "overgg-swiftui";
 			sourceTree = "<group>";
@@ -75,6 +93,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4E5006732340F01900AC36DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E5006742340F01900AC36DC /* librust.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,6 +108,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E50066D2340EA9800AC36DC /* Build configuration list for PBXNativeTarget "overgg-swiftui" */;
 			buildPhases = (
+				4E5006722340EED200AC36DC /* ShellScript */,
 				4E5006552340EA9600AC36DC /* Sources */,
 				4E5006562340EA9600AC36DC /* Frameworks */,
 				4E5006572340EA9600AC36DC /* Resources */,
@@ -107,6 +134,7 @@
 				TargetAttributes = {
 					4E5006582340EA9600AC36DC = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -135,11 +163,32 @@
 			files = (
 				4E5006692340EA9800AC36DC /* LaunchScreen.storyboard in Resources */,
 				4E5006662340EA9800AC36DC /* Preview Assets.xcassets in Resources */,
+				4E5006712340ECFE00AC36DC /* rust in Resources */,
 				4E5006632340EA9800AC36DC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E5006722340EED200AC36DC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# The $PATH used by XCode likely won't contain Cargo, fix that.\n# This assumes a default `rustup` setup.\nexport PATH=\"$HOME/.cargo/bin:$PATH\"\n\n# --xcode-integ determines --release and --targets from XCode's env vars.\n# Depending your setup, specify the rustup toolchain explicitly.\ncargo lipo --xcode-integ --manifest-path ./rust/Cargo.toml\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E5006552340EA9600AC36DC /* Sources */ = {
@@ -148,6 +197,9 @@
 			files = (
 				4E50065D2340EA9600AC36DC /* AppDelegate.swift in Sources */,
 				4E50065F2340EA9600AC36DC /* SceneDelegate.swift in Sources */,
+				4EAD69DB2340FB49003EA06A /* Downloader.swift in Sources */,
+				4EAD69DA2340FB49003EA06A /* Scrapers.swift in Sources */,
+				4EAD69D92340FB49003EA06A /* DataStructs.swift in Sources */,
 				4E5006612340EA9600AC36DC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,19 +336,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"overgg-swiftui/Preview Content\"";
 				DEVELOPMENT_TEAM = 3QW3A57NDT;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "overgg-swiftui/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rust/target/universal/debug",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.cldfire.overgg-swiftui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "overgg-swiftui/overgg-swiftui-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/rust";
 			};
 			name = Debug;
 		};
@@ -304,19 +365,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"overgg-swiftui/Preview Content\"";
 				DEVELOPMENT_TEAM = 3QW3A57NDT;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "overgg-swiftui/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rust/target/universal/release",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.cldfire.overgg-swiftui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "overgg-swiftui/overgg-swiftui-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/rust";
 			};
 			name = Release;
 		};

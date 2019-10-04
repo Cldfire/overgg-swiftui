@@ -1,0 +1,16 @@
+[package]
+name = "_rust"
+version = "0.1.0"
+authors = ["Cldfire"]
+edition = "2018"
+
+[lib]
+name = "rust"
+crate-type = ["staticlib"]
+
+[dependencies]
+overgg-scraper = { path = "../../../rust_projects/overgg-scraper" }
+error-chain = { version = "0.12.1", default-features = false }
+
+[build-dependencies]
+cbindgen = "0.9"

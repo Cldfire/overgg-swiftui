@@ -1,16 +1,19 @@
 //
-//  ContentView.swift
-//  overgg-swiftui
-//
-//  Created by Jarek Samic on 9/29/19.
-//  Copyright © 2019 Jarek Samic. All rights reserved.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    let matches: [MatchBriefInfo] = Downloader().mainPage()!.matchesBrief(.Completed)!
+    
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Text("Completed Matches")
+                .font(.title)
+
+            ForEach(matches) { match in
+                Text("\(match.teams[0].name) played \(match.teams[1].name)")
+            }
+        }
     }
 }
 
