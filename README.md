@@ -12,5 +12,6 @@ Fast forward to today: I discovered SwiftUI and it looks really neat, so I decid
 
 ## Building
 
-Thanks to [cargo-lipo's](https://github.com/TimNN/cargo-lipo) super-neat XCode integration, all you have to do is clone the repository, open the XCode project, and then kick off a build from the UI.
+You will need to have [cargo-lipo](https://github.com/TimNN/cargo-lipo) installed and the Rust iOS targets set up (see cargo-lipo's readme for info).
 
+Thanks to cargo-lipo's super-neat XCode integration, all you have to do is clone the repository, open the XCode project, and then kick off a build from the UI.
