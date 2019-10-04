@@ -3,10 +3,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    // TODO: set up a bindable object to store all of this and bind to it here
     let completedMatches: [MatchBriefInfo] = Downloader().mainPage()!.matchesBrief(.Completed)!
     let upcomingMatches: [MatchBriefInfo] = Downloader().mainPage()!.matchesBrief(.InFuture)!
     let liveMatches: [MatchBriefInfo] = Downloader().mainPage()!.matchesBrief(.Live)!
-    
+
     var body: some View {
         NavigationView {
             List {
@@ -38,6 +39,7 @@ struct Match: View {
 
     var body: some View {
         HStack {
+            // TODO: stick slim green rectangle in front of winner
             VStack(alignment: .leading) {
                 Text("\(match.teams[0].name)")
                     .if(isComplete && didTeamZeroWin()) { content in
